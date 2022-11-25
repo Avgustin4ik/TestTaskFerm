@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(HorizontalLayoutGroup))]//жестко
+[RequireComponent(typeof(LayoutGroup))]//жестко
 internal class UISelectIconsLayout : MonoBehaviour
 {
 }

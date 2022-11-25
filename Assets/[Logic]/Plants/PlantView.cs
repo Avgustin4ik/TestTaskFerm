@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using DG.Tweening;
+using Plants;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
@@ -12,22 +13,23 @@ public enum PlantStatus
 }
 public class PlantView : MonoBehaviour
 {
-    [field: SerializeField] public float RipeningDuration { get; private set; }
-    [field: SerializeField, Min(0)] public int Expiriens { get; private set; }
+    [SerializeField] private PlantData data;
     public PlantStatus Status;
 
     [SerializeField] private UITimer uiElement;
     [SerializeField] private Sprite iconSprite;
-    [SerializeField] private GameObject model;
+    [SerializeField] private PlantModel model;
+    public static event Action<int> onPlantRipe;
 
     public void Grow()
     {
         StartCoroutine(GrowRoutine());
     }
 
-    public static event Action<int> onPlantRipe;
     public virtual IEnumerator GrowRoutine()
     {
+        var RipeningDuration = data.RipeningDuration;
+        var Expiriens = data.Expiriens;
         var modelTransform = model.transform;
         modelTransform.localScale = Vector3.zero;
         var timer = 0f;

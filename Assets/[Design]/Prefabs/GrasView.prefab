@@ -2362,12 +2362,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcc097682b3644e78dda8fb126eac45b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <RipeningDuration>k__BackingField: 6
-  <Expiriens>k__BackingField: 5
+  data: {fileID: 11400000, guid: f400742dcc320cf419e9b56378ac4f47, type: 2}
   Status: 0
   uiElement: {fileID: 6148080470937561753}
   iconSprite: {fileID: 21300000, guid: 76992f75515113f4784d5bf6a7200f36, type: 3}
-  model: {fileID: 8190545596357233545}
+  model: {fileID: 6463315950480045520}
 --- !u!1 &1773767393325074056
 GameObject:
   m_ObjectHideFlags: 0
@@ -10061,6 +10060,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8699262494116460726}
+  - component: {fileID: 6463315950480045520}
   m_Layer: 0
   m_Name: PlantModel
   m_TagString: Untagged
@@ -10084,6 +10084,18 @@ Transform:
   m_Father: {fileID: 1762514112072746499}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6463315950480045520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8190545596357233545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fede30cc88cc4a09b51bb0de987702f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8366623245026929905
 GameObject:
   m_ObjectHideFlags: 0

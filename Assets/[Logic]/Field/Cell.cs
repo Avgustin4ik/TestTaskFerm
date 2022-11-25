@@ -1,20 +1,13 @@
 ﻿using System;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class Cell : MonoBehaviour
 {
     [field: SerializeField] public Transform PlantPoint { get; private set; }
+    private bool _isUIHide = true;
+    private PlantView _plant;
+    public static event Action<Cell> onCellClicked;
     public PlantStatus GetPlantStatus => _plant.Status;
-    private void Awake()
-    {
-    }
-
-
-    private void OnDestroy()
-    {
-    }
 
     private bool _isEmpty = true;
     public bool IsEmpty
@@ -23,9 +16,6 @@ public class Cell : MonoBehaviour
         set => _isEmpty = value;
     }
 
-    private bool _isUIHide = true;
-    private PlantView _plant;
-    public static event Action<Cell> onCellClicked;
     public void OnCellClickedDown()
     {
         var position = transform.position + Vector3.up*2f;

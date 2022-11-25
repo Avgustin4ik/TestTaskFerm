@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class UISelectIconElement : MonoBehaviour, IPointerDownHandler
 {
+    public event Action<int> onIconSelected; 
     //todo привести к единообразию
     [SerializeField] private Image _image ;
     private int _searchIndex;
@@ -15,13 +16,8 @@ public class UISelectIconElement : MonoBehaviour, IPointerDownHandler
         set => _searchIndex = value;
     }
 
-    private void Awake()
-    {
-    }
-
     public void SetIcon(Sprite icon) => _image.sprite = icon;
     
-    public event Action<int> onIconSelected; 
     
     public void OnPointerDown(PointerEventData eventData)
     {

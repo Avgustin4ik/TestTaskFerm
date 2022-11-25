@@ -6,6 +6,7 @@ public class UIElement : MonoBehaviour
 {
     private bool _isHide = false;
     private Sequence _sequence;
+    public bool IsHide => _isHide;
 
     private void OnEnable()
     {
@@ -18,7 +19,6 @@ public class UIElement : MonoBehaviour
     [SerializeField] protected float duration;
     [SerializeField] protected Ease ease;
 
-    public bool IsHide => _isHide;
     [ContextMenu("UIElement/Show")]
     public virtual void Show()
     {

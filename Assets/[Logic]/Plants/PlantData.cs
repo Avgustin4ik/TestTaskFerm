@@ -8,7 +8,5 @@ namespace Plants
     {
         [field: SerializeField] public float RipeningDuration { get; private set; }
         [field: SerializeField, Min(0)] public int Expiriens { get; private set; }
-        [field: SerializeField, Min(0)] public PlantModel model{ get; private set; }
-
     }
 }

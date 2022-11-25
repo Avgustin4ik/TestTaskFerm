@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3280374296746062052}
+  - component: {fileID: 912873413629569583}
   m_Layer: 0
   m_Name: PlantModel
   m_TagString: Untagged
@@ -32,6 +33,18 @@ Transform:
   m_Father: {fileID: 1762514112072746499}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &912873413629569583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313622083482041269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fede30cc88cc4a09b51bb0de987702f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &750816710890506258
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,12 +175,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e52a0ad498741c59635f138fb02e507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <RipeningDuration>k__BackingField: 8
-  <Expiriens>k__BackingField: 10
+  data: {fileID: 11400000, guid: 3b4d47391ce89c548ae8e43d68f78c06, type: 2}
   Status: 0
   uiElement: {fileID: 1762514111690806433}
   iconSprite: {fileID: 21300000, guid: a6c0828e631aa154fa6a8e0f8ae0834b, type: 3}
-  model: {fileID: 313622083482041269}
+  model: {fileID: 912873413629569583}
 --- !u!1 &1899593899390935300
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,6 +640,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1762514112072746499}
     m_Modifications:
+    - target: {fileID: 8837203240826711972, guid: ed10b72f5b50e324e87cb01c6663062e, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8837203240826711974, guid: ed10b72f5b50e324e87cb01c6663062e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

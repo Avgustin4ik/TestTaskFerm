@@ -10,7 +10,9 @@ namespace UI
         [SerializeField] private UISelectPlantMenu uiSelectPlantMenu;
         [SerializeField] private PlantsCatalog plantsCatalog;
         [SerializeField] private TMP_Text playerExpLabel;
+        [SerializeField] private TMP_Text playerCarrotCounterLabel;
         private  List<UISelectIconElement> iconsList;
+        private Cell _lastSelectedCell;
 
         public void SetExpLabel(int value)
         {
@@ -46,8 +48,6 @@ namespace UI
             uiSelectPlantMenu.Hide();
         }
 
-        private Cell _lastSelectedCell;
-        [SerializeField] private TMP_Text playerCarrotCounterLabel;
 
         private void OnCellClicked(Cell cell)
         {
